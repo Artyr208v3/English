@@ -1,0 +1,137 @@
+@import "bourbon";
+
+html {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+.container {
+  position: relative;
+  background: #f1f1f1;
+  margin: 40px auto;
+  width: 80%;
+  height: 360px;
+}
+.left-bg, .right-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  transition: .25s ease;
+}
+.left-bg {
+  background-image: url(https://setemonic.ru/wp-content/uploads/5/4/3/54398dc8ef46d4d22559a5c95c93c245.jpeg);
+  background-size: no-repeat;
+
+            background-position: center;
+
+            background-size: cover;
+  left: 0;
+}
+.right-bg {
+  background-image: url(https://huaxinprinting.com/wp-content/uploads/2021/05/book-paper-printed-book-1814123.jpg);
+  background-position: right;
+  right: 0;
+}
+.right-bg:before {
+  content: "OR";
+  font-weight: bold;
+  position: absolute;
+  background: white;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  top: 150px;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+}
+.right-bg:after {
+  content: " ";
+  height: 280px;
+  width: 1px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+}
+.right-bg:after {
+  right: 0;
+}
+.left-bg:hover {
+  width: 60%;
+}
+.left-bg:hover + .right-bg {
+  width: 40%;
+}
+.right-bg:hover {
+  width: 60%;
+}
+.right-bg:hover + .left-bg {
+  width: 40%;
+}
+.gradient-button {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 80px 120px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+    box-sizing: border-box;
+    font-size: 1.2cm;
+  }
+  .gradient-button:hover {
+    background-position: right center;
+  }
+  table.iksweb{
+	border-collapse:collapse;
+	border-spacing:0;
+	height: auto; }
+table.iksweb,table.iksweb td, table.iksweb th {
+	border: 1px solid #595959; }
+    .arrow-8 {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 30px auto 80px auto;
+    }
+    .arrow-8:before,
+    .arrow-8:after {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-left: 26px solid #337AB7;
+        border-bottom: 26px solid #337AB7;
+        animation: arrow-8 3s linear infinite;
+    }
+    .arrow-8:after {
+        animation: arrow-8 3s linear infinite -1.5s;
+    }
+    @keyframes arrow-8 {
+        0% {
+            opacity: 0;
+            transform: translate(0, -53px) rotate(-45deg);
+        }
+        10%, 90% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;  
+            transform: translate(0, 0) rotate(-45deg);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(0, 53px) rotate(-45deg);
+        }
+    }
